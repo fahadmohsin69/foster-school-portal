@@ -1,0 +1,1038 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="main-content-container overflow-hidden">
+ <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-4 mt-1">
+  <h3 class="mb-0">
+   Profile
+  </h3>
+  <nav aria-label="breadcrumb">
+   <ol class="breadcrumb align-items-center mb-0 lh-1">
+    <li class="breadcrumb-item">
+     <a class="d-flex align-items-center text-decoration-none" href="index.html">
+      <i class="ri-home-8-line fs-15 text-primary me-1">
+      </i>
+      <span class="text-body fs-14 hover">
+       Dashboard
+      </span>
+     </a>
+    </li>
+    <li aria-current="page" class="breadcrumb-item active">
+     <span>
+      Social
+     </span>
+    </li>
+    <li aria-current="page" class="breadcrumb-item active">
+     <span class="text-secondary">
+      Profile
+     </span>
+    </li>
+   </ol>
+  </nav>
+ </div>
+ <div class="row">
+  <div class="col-xxl-9">
+   <div class="social-profile">
+    <div class="card border-0 bg-white rounded-10 mb-4">
+     <div class="position-relative">
+      <img alt="profile-cover" class="rounded-top-3 w-100" src="assets/images/profile-cover.jpg"/>
+      <div class="position-absolute z-1" style="bottom: 20px; right: 20px;">
+       <button class="btn btn-primary text-white fs-16 fw-normal hover rounded-1" style="padding: 14px 26px;">
+        Edit Cover Photo
+       </button>
+      </div>
+     </div>
+     <div class="card border-0 rounded-10 p-20 pb-0 rounded-top-0 profile-info" style="background-color: transparent !important;">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3">
+       <div class="d-flex align-items-end">
+        <div class="flex-shrink-0 position-relative">
+         <div class="avatar-upload">
+          <div class="avatar-edit" data-bs-placement="top" data-bs-title="Image Size (190x190)" data-bs-toggle="tooltip">
+           <input accept=".png, .jpg, .jpeg" id="imageUpload" type="file">
+            <label for="imageUpload">
+            </label>
+           </input>
+          </div>
+          <div class="avatar-preview">
+           <div id="imagePreview" style="background-image: url(https://angular.hibootstrap.com/daxa/images/profile.jpg);">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="flex-grow-1 ms-20 mb-45">
+         <h3 class="mb-1">
+          Micheal Collins
+         </h3>
+         <span class="fs-16">
+          micheal@gmail.com
+         </span>
+        </div>
+       </div>
+       <div class="d-flex align-items-center mb-sm-4">
+        <button class="btn btn-outline-border-color-70 text-secondary fw-normal fs-16 hover-bg" style="padding: 12px 15px;">
+         Message
+        </button>
+        <button class="btn btn-outline-border-color-70 text-secondary fw-normal fs-16 hover-bg ms-10" style="padding: 12px 15px;">
+         Follow
+        </button>
+       </div>
+      </div>
+      <ul class="nav nav-tabs profile-tabs border-0 justify-content-center gap-2" id="myTab" role="tablist">
+       <li class="nav-item" role="presentation">
+        <button aria-controls="timeline-tab-pane" aria-selected="true" class="nav-link rounded-0 fs-16 border-0 p-0 bg-transparent text-body active" data-bs-target="#timeline-tab-pane" data-bs-toggle="tab" id="timeline-tab" role="tab" type="button">
+         Timeline
+        </button>
+       </li>
+       <li class="nav-item" role="presentation">
+        <button aria-controls="about-tab-pane" aria-selected="false" class="nav-link rounded-0 fs-16 border-0 p-0 bg-transparent text-body" data-bs-target="#about-tab-pane" data-bs-toggle="tab" id="about-tab" role="tab" type="button">
+         About
+        </button>
+       </li>
+       <li class="nav-item" role="presentation">
+        <button aria-controls="activity-tab-pane" aria-selected="false" class="nav-link rounded-0 fs-16 border-0 p-0 bg-transparent text-body" data-bs-target="#activity-tab-pane" data-bs-toggle="tab" id="activity-tab" role="tab" type="button">
+         Activity
+        </button>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-lg-4 order-2 order-lg-1">
+      <div class="card bg-white border border-white rounded-10 mb-4">
+       <div class="p-20 pb-0">
+        <h3 class="mb-20">
+         Friends
+        </h3>
+        <form class="table-src-form position-relative mx-0">
+         <input class="form-control w-100" placeholder="Search" type="text"/>
+         <div class="src-btn position-absolute top-50 start-0 translate-middle-y bg-transparent p-0 border-0">
+          <span class="material-symbols-outlined">
+           search
+          </span>
+         </div>
+        </form>
+       </div>
+       <ul class="p-20 mb-0 list-unstyled last-child-none" data-simplebar="" style="max-height: 787px;">
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user15" class="rounded-circle" src="assets/images/user15.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-success border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Marcia Baker
+           </h6>
+           <span class="fs-14 text-body">
+            baker@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user16" class="rounded-circle" src="assets/images/user16.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-danger border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Carolyn Barnes
+           </h6>
+           <span class="fs-14 text-body">
+            barnes@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user17" class="rounded-circle" src="assets/images/user17.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-success border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Donna Miller
+           </h6>
+           <span class="fs-14 text-body">
+            miller@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user14" class="rounded-circle" src="assets/images/user14.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-success border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Barbara Cross
+           </h6>
+           <span class="fs-14 text-body">
+            cross@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user13" class="rounded-circle" src="assets/images/user13.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-danger border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Rebecca Block
+           </h6>
+           <span class="fs-14 text-body">
+            block@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user12" class="rounded-circle" src="assets/images/user12.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-danger border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Ramiro McCarty
+           </h6>
+           <span class="fs-14 text-body">
+            mccarty@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user11" class="rounded-circle" src="assets/images/user11.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-success border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Robert Fairweather
+           </h6>
+           <span class="fs-14 text-body">
+            fairweather@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user10" class="rounded-circle" src="assets/images/user10.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-danger border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Marcelino Haddock
+           </h6>
+           <span class="fs-14 text-body">
+            haddock@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="profile" class="rounded-circle" src="assets/images/profile.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-danger border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Thomas Wilson
+           </h6>
+           <span class="fs-14 text-body">
+            wilson@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+        <li class="pb-3 mb-3 border-light border-bottom">
+         <div class="d-flex align-items-center">
+          <div class="flex-shrink-0 position-relative">
+           <img alt="user8" class="rounded-circle" src="assets/images/user8.jpg" style="width: 45px; height: 45px;"/>
+           <div class="position-absolute p-1 bg-danger border border-2 border-white rounded-circle bottom-0 end-0">
+           </div>
+          </div>
+          <div class="flex-grow-1 ms-12 position-relative top-2">
+           <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+            Nathaniel Hulsey
+           </h6>
+           <span class="fs-14 text-body">
+            hulsey@gmail.com
+           </span>
+          </div>
+         </div>
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="col-lg-8 order-1 order-lg-2">
+      <div class="tab-content" id="myTabContent">
+       <div aria-labelledby="timeline-tab" class="tab-pane fade show active" id="timeline-tab-pane" role="tabpanel" tabindex="0">
+        <div class="card bg-white border border-white p-20 rounded-10 mb-4">
+         <ul class="p-0 mb-20 list-unstyled d-flex flex-wrap border-border-color-80 border-bottom" id="active-class" style="gap: 35px;">
+          <li class="menu-item fs-16 fw-medium active">
+           Create Post
+          </li>
+          <li class="menu-item fs-16 fw-medium">
+           Photos/Videos
+          </li>
+          <li class="menu-item fs-16 fw-medium">
+           Story
+          </li>
+         </ul>
+         <form>
+          <div class="mb-20">
+           <div class="form-floating">
+            <textarea class="form-control" id="floatingTextarea1" placeholder="What's on your mind, Micheal?" style="height: 152px"></textarea>
+            <label for="floatingTextarea1">
+             What's on your mind, Micheal?
+            </label>
+           </div>
+          </div>
+          <div class="d-flex align-items-center gap-2 gap-sm-3">
+           <button class="btn btn-primary fs-16 fw-normal text-white" type="button">
+            Publish Post
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+            <i class="ri-emotion-line">
+            </i>
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+            <i class="ri-link-m">
+            </i>
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+            <i class="ri-mic-line">
+            </i>
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+            <i class="ri-image-line">
+            </i>
+           </button>
+          </div>
+         </form>
+        </div>
+        <div class="card bg-white border border-white p-20 rounded-10 mb-4">
+         <div class="d-flex justify-content-between align-items-center border-bottom border-border-color-80 pb-20 mb-20">
+          <a class="d-flex align-items-center text-decoration-none" href="profile.html">
+           <div class="flex-shrink-0">
+            <img alt="user15" class="rounded-circle" src="assets/images/user15.jpg" style="width: 55px; height: 55px;"/>
+           </div>
+           <div class="flex-grow-1 ms-12 position-relative top-2">
+            <h6 class="mb-1 fs-16 fw-medium">
+             Cynthia Baggett
+            </h6>
+            <span class="fs-14 text-body">
+             05 mins ago
+            </span>
+           </div>
+          </a>
+          <div class="dropdown select-dropdown without-border" data-bs-placement="top" data-bs-title="More" data-bs-toggle="tooltip">
+           <button aria-expanded="false" class="bg-transparent border-0 p-0 position-relative top-3 text-body" data-bs-toggle="dropdown" type="button">
+            <i class="material-symbols-outlined fs-24 text-secondary">
+             more_horiz
+            </i>
+           </button>
+           <ul class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow rounded-10" data-simplebar="">
+            <li>
+             <button class="dropdown-item text-secondary">
+              Save Post
+             </button>
+            </li>
+            <li>
+             <button class="dropdown-item text-secondary">
+              Hide Post
+             </button>
+            </li>
+            <li>
+             <button class="dropdown-item text-secondary">
+              Report Photo
+             </button>
+            </li>
+            <li>
+             <button class="dropdown-item text-secondary">
+              Block Cynthia
+             </button>
+            </li>
+           </ul>
+          </div>
+         </div>
+         <p class="lh-1-8 fs-16">
+          Pellentesque viverra lorem malesuada nunc tristique sapien. Imperdiet sit hendrerit tincidunt bibendum donec adipiscing. Tellus non morbi nascetur cursus etiam facilisis mi. Dolor aliquam sed amet aliquam venenatis. Ac viverra interdum tortor enim. Molestie tincidunt ut consequat a urna tortor. Vitae velit ac nisl velit mauris placerat nisi placerat.
+         </p>
+         <div class="border-top border-bottom border-light py-2 mb-20">
+          <div class="d-flex align-items-center flex-wrap gap-2 gap-sm-4">
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover align-items-center d-flex">
+            <i class="ri-thumb-up-line fs-18">
+            </i>
+            <span class="fs-15 ms-2">
+             10 Likes
+            </span>
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover align-items-center d-flex">
+            <i class="ri-chat-4-line fs-18">
+            </i>
+            <span class="fs-15 ms-2">
+             0 Comments
+            </span>
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover align-items-center d-flex">
+            <i class="ri-share-line fs-18">
+            </i>
+            <span class="fs-15 ms-2">
+             0 Share
+            </span>
+           </button>
+          </div>
+         </div>
+         <form>
+          <div class="d-flex flex-wrap flex-sm-nowrap gap-2 gap-sm-0 justify-content-between align-items-center">
+           <div class="d-flex align-items-center text-decoration-none w-100">
+            <div class="flex-shrink-0">
+             <img alt="user" class="rounded-circle" src="assets/images/profile.jpg" style="width: 55px; height: 55px;"/>
+            </div>
+            <div class="flex-grow-1 ms-3 position-relative top-2">
+             <input class="form-control" placeholder="Type something...." type="text"/>
+            </div>
+           </div>
+           <div class="d-flex align-items-center gap-3 ms-3">
+            <button class="p-0 bg-primary border-0 rounded-2 d-flex align-items-center justify-content-center" style="width: 56px; height: 56px;" type="button">
+             <i class="material-symbols-outlined text-white">
+              send
+             </i>
+            </button>
+            <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+             <i class="ri-emotion-line">
+             </i>
+            </button>
+            <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+             <i class="ri-link-m">
+             </i>
+            </button>
+           </div>
+          </div>
+         </form>
+        </div>
+        <div class="card bg-white border border-white p-20 rounded-10 mb-4">
+         <div class="d-flex justify-content-between align-items-center border-bottom border-border-color-80 pb-20 mb-20">
+          <a class="d-flex align-items-center text-decoration-none" href="profile.html">
+           <div class="flex-shrink-0">
+            <img alt="user17" class="rounded-circle" src="assets/images/user17.jpg" style="width: 55px; height: 55px;"/>
+           </div>
+           <div class="flex-grow-1 ms-12 position-relative top-2">
+            <h6 class="mb-1 fs-16 fw-medium">
+             Douglas Hairston
+            </h6>
+            <span class="fs-14 text-body">
+             1 hour ago
+            </span>
+           </div>
+          </a>
+          <div class="dropdown select-dropdown without-border" data-bs-placement="top" data-bs-title="More" data-bs-toggle="tooltip">
+           <button aria-expanded="false" class="bg-transparent border-0 p-0 position-relative top-3 text-body" data-bs-toggle="dropdown" type="button">
+            <i class="material-symbols-outlined fs-24 text-secondary">
+             more_horiz
+            </i>
+           </button>
+           <ul class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow rounded-10" data-simplebar="">
+            <li>
+             <button class="dropdown-item text-secondary">
+              Save Post
+             </button>
+            </li>
+            <li>
+             <button class="dropdown-item text-secondary">
+              Hide Post
+             </button>
+            </li>
+            <li>
+             <button class="dropdown-item text-secondary">
+              Report Photo
+             </button>
+            </li>
+            <li>
+             <button class="dropdown-item text-secondary">
+              Block Cynthia
+             </button>
+            </li>
+           </ul>
+          </div>
+         </div>
+         <p class="lh-1-8 fs-16">
+          Pellentesque viverra lorem malesuada nunc tristique sapien. Imperdiet sit hendrerit tincidunt bibendum donec adipiscing. Tellus non morbi nascetur cursus etiam facilisis mi. Dolor aliquam sed amet aliquam venenatis. Ac viverra interdum tortor enim. Molestie tincidunt ut consequat a urna tortor. Vitae velit ac nisl velit mauris placerat nisi placerat.
+         </p>
+         <div class="border-top border-bottom border-light py-2 mb-20">
+          <div class="d-flex align-items-center flex-wrap gap-2 gap-sm-4">
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover align-items-center d-flex">
+            <i class="ri-thumb-up-line fs-18">
+            </i>
+            <span class="fs-15 ms-2">
+             42 Likes
+            </span>
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover align-items-center d-flex">
+            <i class="ri-chat-4-line fs-18">
+            </i>
+            <span class="fs-15 ms-2">
+             2 Comments
+            </span>
+           </button>
+           <button class="p-0 bg-transparent border-0 fs-20 text-body hover align-items-center d-flex">
+            <i class="ri-share-line fs-18">
+            </i>
+            <span class="fs-15 ms-2">
+             1 Share
+            </span>
+           </button>
+          </div>
+         </div>
+         <form>
+          <div class="d-flex flex-wrap flex-sm-nowrap gap-2 gap-sm-0 justify-content-between align-items-center">
+           <div class="d-flex align-items-center text-decoration-none w-100">
+            <div class="flex-shrink-0">
+             <img alt="profile" class="rounded-circle" src="assets/images/profile.jpg" style="width: 55px; height: 55px;"/>
+            </div>
+            <div class="flex-grow-1 ms-3 position-relative top-2">
+             <input class="form-control" placeholder="Type something...." type="text"/>
+            </div>
+           </div>
+           <div class="d-flex align-items-center gap-3 ms-3">
+            <button class="p-0 bg-primary border-0 rounded-2 d-flex align-items-center justify-content-center" style="width: 56px; height: 56px;" type="button">
+             <i class="material-symbols-outlined text-white">
+              send
+             </i>
+            </button>
+            <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+             <i class="ri-emotion-line">
+             </i>
+            </button>
+            <button class="p-0 bg-transparent border-0 fs-20 text-body hover" type="button">
+             <i class="ri-link-m">
+             </i>
+            </button>
+           </div>
+          </div>
+         </form>
+        </div>
+       </div>
+       <div aria-labelledby="about-tab" class="tab-pane fade" id="about-tab-pane" role="tabpanel" tabindex="0">
+        <div class="card bg-white border border-white rounded-10 p-20 mb-4">
+         <h3 class="mb-3">
+          Profile Information
+         </h3>
+         <ul class="p-0 mb-30 list-unstyled last-child-none">
+          <li class="mb-10 fs-16">
+           User ID:
+           <span class="text-secondary">
+            7001
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Full Name:
+           <span class="text-secondary">
+            Micheal Collins
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Email:
+           <span class="text-secondary">
+            micheal@gmail.com
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Role:
+           <span class="text-secondary">
+            Administrator
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Location:
+           <span class="text-secondary">
+            New York, USA
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Join Date:
+           <span class="text-secondary">
+            May 10, 2025
+           </span>
+          </li>
+         </ul>
+         <h3 class="mb-3">
+          Additional Information
+         </h3>
+         <ul class="p-0 mb-0 list-unstyled last-child-none">
+          <li class="mb-10 fs-16">
+           Phone:
+           <span class="text-secondary">
+            +1 444 266 5599
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Address:
+           <span class="text-secondary">
+            84 S. Arrowhead Court Branford
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Orders:
+           <span class="text-secondary">
+            696
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Product:
+           <span class="text-secondary">
+            9240
+           </span>
+          </li>
+          <li class="mb-10 fs-16">
+           Event:
+           <span class="text-secondary">
+            5 events
+           </span>
+          </li>
+         </ul>
+        </div>
+       </div>
+       <div aria-labelledby="activity-tab" class="tab-pane fade" id="activity-tab-pane" role="tabpanel" tabindex="0">
+        <div class="card bg-white border border-white rounded-10 p-20 mb-4">
+         <h3 class="mb-20">
+          Recent Activity
+         </h3>
+         <ul class="p-0 mb-20 list-unstyled last-child-none">
+          <li class="pb-3 mb-3 border-light border-bottom">
+           <div class="d-flex">
+            <div class="flex-shrink-0">
+             <img alt="user1" class="rounded-circle" src="assets/images/user1.jpg" style="width: 50px; height: 50px;"/>
+            </div>
+            <div class="flex-grow-1 ms-12 position-relative top-2">
+             <h6 class="fs-16 fw-medium mb-1" style="margin-bottom: 2.5px;">
+              Justin Butler
+             </h6>
+             <span class="fs-14 text-body d-block mb-1">
+              20 Nov, 2025 (09:30 AM)
+             </span>
+             <p class="fs-16">
+              User Justin Butler updated their profile information.
+             </p>
+            </div>
+           </div>
+          </li>
+          <li class="pb-3 mb-3 border-light border-bottom">
+           <div class="d-flex">
+            <div class="flex-shrink-0">
+             <img alt="user2" class="rounded-circle" src="assets/images/user2.jpg" style="width: 50px; height: 50px;"/>
+            </div>
+            <div class="flex-grow-1 ms-12 position-relative top-2">
+             <h6 class="fs-16 fw-medium mb-1" style="margin-bottom: 2.5px;">
+              Joshua Thayer
+             </h6>
+             <span class="fs-14 text-body d-block mb-1">
+              18 Nov, 2025 (03:45 PM)
+             </span>
+             <p class="fs-16">
+              Discuss with the customer what kind of benefits will be provided in a project
+             </p>
+            </div>
+           </div>
+          </li>
+          <li class="pb-3 mb-3 border-light border-bottom">
+           <div class="d-flex">
+            <div class="flex-shrink-0">
+             <img alt="user3" class="rounded-circle" src="assets/images/user3.jpg" style="width: 50px; height: 50px;"/>
+            </div>
+            <div class="flex-grow-1 ms-12 position-relative top-2">
+             <h6 class="fs-16 fw-medium mb-1" style="margin-bottom: 2.5px;">
+              Gladys Keen
+             </h6>
+             <span class="fs-14 text-body d-block mb-1">
+              17 Nov, 2025 (11:15 AM)
+             </span>
+             <p class="fs-16">
+              Estimate the full budget of the project and take customer feedback
+             </p>
+            </div>
+           </div>
+          </li>
+          <li class="pb-3 mb-3 border-light border-bottom">
+           <div class="d-flex">
+            <div class="flex-shrink-0">
+             <img alt="user4" class="rounded-circle" src="assets/images/user4.jpg" style="width: 50px; height: 50px;"/>
+            </div>
+            <div class="flex-grow-1 ms-12 position-relative top-2">
+             <h6 class="fs-16 fw-medium mb-1" style="margin-bottom: 2.5px;">
+              Stanley Mathews
+             </h6>
+             <span class="fs-14 text-body d-block mb-1">
+              15 Nov, 2025 (02:00 PM)
+             </span>
+             <p class="fs-16">
+              Attempted access to a restricted area.
+             </p>
+            </div>
+           </div>
+          </li>
+          <li class="pb-3 mb-3 border-light border-bottom">
+           <div class="d-flex">
+            <div class="flex-shrink-0">
+             <img alt="user4" class="rounded-circle" src="assets/images/user4.jpg" style="width: 50px; height: 50px;"/>
+            </div>
+            <div class="flex-grow-1 ms-12 position-relative top-2">
+             <h6 class="fs-16 fw-medium mb-1" style="margin-bottom: 2.5px;">
+              Jennifer Lockhart
+             </h6>
+             <span class="fs-14 text-body d-block mb-1">
+              14 Nov, 2025 (04:20 PM)
+             </span>
+             <p class="fs-16">
+              User Jennifer Lockhart deactivated their account
+             </p>
+            </div>
+           </div>
+          </li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="col-xxl-3">
+   <div class="row">
+    <div class="col-xxl-12 col-md-6">
+     <div class="card bg-white border border-white rounded-10 p-20 mb-4">
+      <h3 class="mb-20">
+       Profile Intro
+      </h3>
+      <div class="d-flex align-items-center mb-3">
+       <div class="flex-shrink-0">
+        <img alt="profile" class="rounded-circle" src="assets/images/profile.jpg" style="width: 75px;"/>
+       </div>
+       <div class="flex-grow-1 ms-3">
+        <h3 class="fs-18" style="margin-bottom: 2px;">
+         Micheal Collins
+        </h3>
+        <span class="fs-16">
+         micheal@gmail.com
+        </span>
+       </div>
+      </div>
+      <h4 class="fw-medium fs-16 mb-2">
+       About Me
+      </h4>
+      <p class="lh-1-8 fs-16">
+       Molestie tincidunt ut consequat a urna tortor. Vitae velit ac nisl velit mauris placerat nisi placerat. Pellentesque viverra lorem malesuada nunc tristique sapien. Imperdiet sit hendrerit tincidunt bibendum donec adipiscing.
+      </p>
+      <h3 class="mb-2 pb-1">
+       Social Profile
+      </h3>
+      <ul class="p-0 mb-0 list-unstyled d-flex" style="gap: 10px;">
+       <li>
+        <a class="d-inline-block rounded-circle text-decoration-none text-center text-white transition-y fs-16" href="https://www.facebook.com/" style="width: 24px; height: 24px; line-height: 24px; background-color: #3a559f;" target="_blank">
+         <i class="ri-facebook-fill">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a class="d-inline-block rounded-circle text-decoration-none text-center text-white transition-y fs-16" href="https://www.twitter.com/" style="width: 24px; height: 24px; line-height: 24px; background-color: #03a9f4;" target="_blank">
+         <i class="ri-twitter-x-line">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a class="d-inline-block rounded-circle text-decoration-none text-center text-white transition-y fs-16" href="https://www.linkedin.com/" style="width: 24px; height: 24px; line-height: 24px; background-color: #007ab9;" target="_blank">
+         <i class="ri-linkedin-fill">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a class="d-inline-block rounded-circle text-decoration-none text-center text-white transition-y fs-16" href="https://www.google.com/" style="width: 24px; height: 24px; line-height: 24px; background-color: #2196f3;" target="_blank">
+         <i class="ri-mail-line">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="col-xxl-12 col-md-6">
+     <div class="card bg-white border border-white rounded-10 mb-4">
+      <h3 class="p-20 pb-0">
+       Followers
+      </h3>
+      <ul class="p-20 mb-0 list-unstyled last-child-none" data-simplebar="" style="max-height: 345px;">
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user1" class="rounded-circle" src="assets/images/user1.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Salvatore Dewall
+          </h6>
+          <span class="fs-14 text-body">
+           dewall@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user3" class="rounded-circle" src="assets/images/user3.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Alina Smith
+          </h6>
+          <span class="fs-14 text-body">
+           smith@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user5" class="rounded-circle" src="assets/images/user5.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Russell Colon
+          </h6>
+          <span class="fs-14 text-body">
+           colon@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user6" class="rounded-circle" src="assets/images/user6.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Leslie Shadle
+          </h6>
+          <span class="fs-14 text-body">
+           shadle@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user7" class="rounded-circle" src="assets/images/user7.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Raymond Nguyen
+          </h6>
+          <span class="fs-14 text-body">
+           nguyen@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="col-xxl-12 col-md-6">
+     <div class="card bg-white border border-white rounded-10 mb-4">
+      <h3 class="p-20 pb-0">
+       Following
+      </h3>
+      <ul class="p-20 mb-0 list-unstyled last-child-none" data-simplebar="" style="max-height: 345px;">
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user8" class="rounded-circle" src="assets/images/user8.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Lenore Crum
+          </h6>
+          <span class="fs-14 text-body">
+           crum@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user9" class="rounded-circle" src="assets/images/user9.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Paul Bartlett
+          </h6>
+          <span class="fs-14 text-body">
+           bartlett@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user10" class="rounded-circle" src="assets/images/user10.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Nikki Lowe
+          </h6>
+          <span class="fs-14 text-body">
+           lowe@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user11" class="rounded-circle" src="assets/images/user11.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Milton Laskowski
+          </h6>
+          <span class="fs-14 text-body">
+           laskowski@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+       <li class="mb-20 d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+         <div class="flex-shrink-0">
+          <img alt="user12" class="rounded-circle" src="assets/images/user12.jpg" style="width: 45px; height: 45px;"/>
+         </div>
+         <div class="flex-grow-1 ms-12 position-relative top-2">
+          <h6 class="fs-16 fw-medium" style="margin-bottom: 2.5px;">
+           Ethel Hillen
+          </h6>
+          <span class="fs-14 text-body">
+           hillen@gmail.com
+          </span>
+         </div>
+        </div>
+        <button class="bg-transparent p-0 border-0 text-body hover-text">
+         Add Friend
+        </button>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="col-xxl-12 col-md-6">
+     <div class="card bg-white border border-white rounded-10 p-20 pb-10 mb-4">
+      <h3 class="mb-lg-4 mb-3">
+       Photos
+      </h3>
+      <div class="row" style="--bs-gutter-x: 10px;">
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo1" class="rounded-2" src="assets/images/photo1.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo2" class="rounded-2" src="assets/images/photo2.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo3" class="rounded-2" src="assets/images/photo3.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo4" class="rounded-2" src="assets/images/photo4.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo5" class="rounded-2" src="assets/images/photo5.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo6" class="rounded-2" src="assets/images/photo6.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo7" class="rounded-2" src="assets/images/photo7.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo8" class="rounded-2" src="assets/images/photo8.jpg"/>
+        </a>
+       </div>
+       <div class="col-lg-4 col-sm-4">
+        <a class="d-block mb-10" href="javascript:void(0);">
+         <img alt="photo9" class="rounded-2" src="assets/images/photo9.jpg"/>
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+
+{% endblock %}

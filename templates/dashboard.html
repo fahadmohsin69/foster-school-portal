@@ -1,0 +1,407 @@
+{% extends 'base.html' %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+    <div class="row">
+                        <div class="col-xxl-4 col-xxxl-12">
+                            <div class="rounded-10 p-20 pb-0 gradient-bg position-relative welcome-card school mb-4">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="fs-16 text-white d-block" style="margin-top: -11px;">{% now "l, F j, Y" %}</span>
+                                        <h3 class="fs-26 fw-medium text-white" style="margin-top: 5px; margin-bottom: 5px;">Welcome Back, {{ student.first_name }} {{ student.last_name }}!</h3>
+                                        <!-- <p class="fs-14 text-white d-block mb-4">School Dashboard.</p> -->
+                                         <p class="fs-14 text-white d-block mb-4">Student ID: <strong>{{ student.student_id }}</strong></p>
+                                        <p class="fs-16 fw-medium text-white mb-0">School Achievement</p>
+                                        <div class="chart">
+                                            <div id="welcome_chart_2"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="text-center text-md-end">
+                                            <img src="{% static 'assets/images/school.png' %}" alt="school">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-xxl-8 col-xxxl-12">
+                            <div class="row">
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-white p-20 rounded-10 border border-white mb-4">
+                                        <h3 class="fw-medium mb-10">Total Students</h3>
+                                        <h2 class="lh-1 fs-26 mb-20 fw-medium">2,800</h2>
+                                        <div class="text-center bg-light rounded-circle mx-auto" style="width: 100px; height: 100px; line-height: 100px; margin-bottom: 32px;">
+                                            <img src="{% static 'assets/images/total-students.svg' %}" alt="total-students">
+                                        </div>
+                                        <p class="d-flex align-items-center gap-1"><i class="material-symbols-outlined fs-14 text-success position-relative top-1">trending_up</i> <span class="text-success">10%</span> Increase in last year</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-white p-20 rounded-10 border border-white mb-4">
+                                        <h3 class="fw-medium mb-10">New Students</h3>
+                                        <h2 class="lh-1 fs-26 mb-20 fw-medium">145</h2>
+                                        <div class="text-center bg-light rounded-circle mx-auto" style="width: 100px; height: 100px; line-height: 100px; margin-bottom: 32px;">
+                                            <img src="{% static 'assets/images/new-students.svg' %}" alt="new-students">
+                                        </div>
+                                        <p class="d-flex align-items-center gap-1"><i class="material-symbols-outlined fs-14 text-success position-relative top-1">trending_up</i> <span class="text-success">10%</span> Join in this year</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-white p-20 rounded-10 border border-white mb-4">
+                                        <h3 class="fw-medium mb-10">Total Teachers</h3>
+                                        <h2 class="lh-1 fs-26 mb-20 fw-medium">60</h2>
+                                        <div class="text-center bg-light rounded-circle mx-auto" style="width: 100px; height: 100px; line-height: 100px; margin-bottom: 32px;">
+                                            <img src="{% static 'assets/images/total-teachers.svg' %}" alt="total-teachers">
+                                        </div>
+                                        <p class="d-flex align-items-center gap-1"><i class="material-symbols-outlined fs-14 text-success position-relative top-1">trending_up</i> <span class="text-success">5%</span> Higher in last year</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-lg-3">
+                                    <div class="card bg-white p-20 rounded-10 border border-white mb-4">
+                                        <h3 class="fw-medium mb-10">Staffs</h3>
+                                        <h2 class="lh-1 fs-26 mb-20 fw-medium">75</h2>
+                                        <div class="text-center bg-light rounded-circle mx-auto" style="width: 100px; height: 100px; line-height: 100px; margin-bottom: 32px;">
+                                            <img src="{% static 'assets/images/staffs.svg' %}" alt="staffs">
+                                        </div>
+                                        <p class="d-flex align-items-center gap-1"><i class="material-symbols-outlined fs-14 text-danger position-relative top-1">trending_down</i> <span class="text-danger">2%</span> Less in last year</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+                    
+                    
+                    <div class="row">
+                        <!-- <div class="col-xxl-9 col-xxxl-12">
+                            <div class="card bg-white rounded-10 border border-white mb-4">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 p-20">
+                                    <h3>Students List</h3>
+        
+                                    <div class="d-flex align-items-center">
+                                        <form class="table-src-form position-relative m-0">
+                                            <input type="text" class="form-control w-344" placeholder="Search">
+                                            <div class="src-btn position-absolute top-50 start-0 translate-middle-y bg-transparent p-0 border-0">
+                                                <span class="material-symbols-outlined">search</span>
+                                            </div>
+                                        </form>
+                                        <div class="dropdown select-dropdown without-border ms-1">
+                                            <button class="dropdown-toggle bg-transparent text-secondary fs-15" data-bs-toggle="dropdown" aria-expanded="false">
+                                                Class 10
+                                            </button>
+                                        
+                                            <ul class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow rounded-10" data-simplebar>
+                                                <li>
+                                                    <button class="dropdown-item text-secondary">Class 7</button>
+                                                </li>
+                                                <li>
+                                                    <button class="dropdown-item text-secondary">Class 8</button>
+                                                </li>
+                                                <li>
+                                                    <button class="dropdown-item text-secondary">Class 9</button>
+                                                </li>
+                                                <li>
+                                                    <button class="dropdown-item text-secondary">Class 10</button>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="default-table-area mx-minus-1 style-two table-student-lists">
+                                    <div class="table-responsive">
+                                        <table class="table align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" class="fw-medium pe-0">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault7">
+                                                        </div>
+                                                    </th>
+                                                    <th scope="col" class="fw-medium ps-0">Student ID</th>
+                                                    <th scope="col" class="fw-medium">Student Name</th>
+                                                    <th scope="col" class="fw-medium">Class</th>
+                                                    <th scope="col" class="fw-medium">Section</th>
+                                                    <th scope="col" class="fw-medium">Age</th>
+                                                    <th scope="col" class="fw-medium">Address</th>
+                                                    <th scope="col" class="fw-medium text-start">Class</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="style-two">
+                                                <tr>
+                                                    <td class="text-body pe-0" style="width: 62px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault8">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-body ps-0">#ARP-001</td> 
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="{% static 'assets/images/user21.jpg' %}" class="rounded-circle" style="width: 35px; height: 35px;" alt="user21">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-12 position-relative top-2">
+                                                                <h3 class="fw-medium mb-0 fs-16">Marcia Baker</h3>
+                                                            </div>
+                                                        </div>
+                                                    </td> 
+                                                    <td class="text-body">10</td> 
+                                                    <td class="text-body">A</td> 
+                                                    <td class="text-body">15</td> 
+                                                    <td class="text-body">
+                                                        <p style="max-width: 141px; clear: fs-16;">725 Southern Street Garden City</p>
+                                                    </td> 
+                                                    <td>
+                                                        <div class="d-flex justify-content-start" style="gap: 12px;">
+                                                            <button class="bg-transparent p-0 border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-primary">visibility</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">drive_file_rename_outline</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">delete</i>
+                                                            </button>
+                                                        </div>
+                                                    </td>  
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-body pe-0" style="width: 62px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault9">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-body ps-0">#ARP-002</td> 
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="{% static 'assets/images/user22.jpg' %}" class="rounded-circle" style="width: 35px; height: 35px;" alt="user22">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-12 position-relative top-2">
+                                                                <h3 class="fw-medium mb-0 fs-16">Carolyn Barnes</h3>
+                                                            </div>
+                                                        </div>
+                                                    </td> 
+                                                    <td class="text-body">10</td> 
+                                                    <td class="text-body">A</td> 
+                                                    <td class="text-body">16</td> 
+                                                    <td class="text-body">
+                                                        <p style="max-width: 141px; clear: fs-16;">27 Rocket Drive Eagan, MN 64</p>
+                                                    </td> 
+                                                    <td>
+                                                        <div class="d-flex justify-content-start" style="gap: 12px;">
+                                                            <button class="bg-transparent p-0 border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-primary">visibility</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">drive_file_rename_outline</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">delete</i>
+                                                            </button>
+                                                        </div>
+                                                    </td> 
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-body pe-0" style="width: 62px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault10">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-body ps-0">#ARP-003</td> 
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="{% static 'assets/images/user23.jpg' %}" class="rounded-circle" style="width: 35px; height: 35px;" alt="user23">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-12 position-relative top-2">
+                                                                <h3 class="fw-medium mb-0 fs-16">Donna Miller</h3>
+                                                            </div>
+                                                        </div>
+                                                    </td> 
+                                                    <td class="text-body">10</td> 
+                                                    <td class="text-body">B</td> 
+                                                    <td class="text-body">15</td> 
+                                                    <td class="text-body">
+                                                        <p style="max-width: 141px; clear: fs-16;">95 Rosewood Lane New York, NY 10</p>
+                                                    </td> 
+                                                    <td>
+                                                        <div class="d-flex justify-content-start" style="gap: 12px;">
+                                                            <button class="bg-transparent p-0 border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-primary">visibility</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">drive_file_rename_outline</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">delete</i>
+                                                            </button>
+                                                        </div>
+                                                    </td> 
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-body pe-0" style="width: 62px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault11">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-body ps-0">#ARP-004</td> 
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="{% static 'assets/images/user24.jpg' %}" class="rounded-circle" style="width: 35px; height: 35px;" alt="user24">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-12 position-relative top-2">
+                                                                <h3 class="fw-medium mb-0 fs-16">Barbara Cross</h3>
+                                                            </div>
+                                                        </div>
+                                                    </td> 
+                                                    <td class="text-body">10</td> 
+                                                    <td class="text-body">C</td> 
+                                                    <td class="text-body">14</td>
+                                                    <td class="text-body">
+                                                        <p style="max-width: 141px; clear: fs-16;">64 Hillview Street Columbia, SC 37</p>
+                                                    </td>  
+                                                    <td>
+                                                        <div class="d-flex justify-content-start" style="gap: 12px;">
+                                                            <button class="bg-transparent p-0 border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-primary">visibility</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">drive_file_rename_outline</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">delete</i>
+                                                            </button>
+                                                        </div>
+                                                    </td> 
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-body pe-0" style="width: 62px;">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="checkbox" id="flexCheckDefault12">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-body ps-0">#ARP-005</td> 
+                                                    <td>
+                                                        <div class="d-flex align-items-center">
+                                                            <div class="flex-shrink-0">
+                                                                <img src="{% static 'assets/images/user25.jpg' %}" class="rounded-circle" style="width: 35px; height: 35px;" alt="user25">
+                                                            </div>
+                                                            <div class="flex-grow-1 ms-12 position-relative top-2">
+                                                                <h3 class="fw-medium mb-0 fs-16">Rebecca Block</h3>
+                                                            </div>
+                                                        </div>
+                                                    </td> 
+                                                    <td class="text-body">10</td> 
+                                                    <td class="text-body">B</td> 
+                                                    <td class="text-body">15</td>
+                                                    <td class="text-body">
+                                                        <p style="max-width: 141px; clear: fs-16;">94 Aspen Court Hyde Park, MA 84</p>
+                                                    </td>  
+                                                    <td>
+                                                        <div class="d-flex justify-content-start" style="gap: 12px;">
+                                                            <button class="bg-transparent p-0 border-0" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="View">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-primary">visibility</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-success" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">drive_file_rename_outline</i>
+                                                            </button>
+                                                            <button class="bg-transparent p-0 border-0 hover-text-danger" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Delete">
+                                                                <i class="material-symbols-outlined fs-16 fw-normal text-body">delete</i>
+                                                            </button>
+                                                        </div>
+                                                    </td>  
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+        
+                                    <div class="d-flex justify-content-center justify-content-sm-between align-items-center text-center flex-wrap gap-2 showing-wrap p-20">
+                                        <span class="fs-15">Showing 1 to 5 of 24 entries</span>
+        
+                                        <nav class="custom-pagination" aria-label="Page navigation example">
+                                            <ul class="pagination mb-0 justify-content-center">
+                                                <li class="page-item">
+                                                    <button class="page-link icon" aria-label="Previous">
+                                                        <i class="material-symbols-outlined">west</i>
+                                                    </button>
+                                                </li>
+                                                <li class="page-item">
+                                                    <button class="page-link active">1</button>
+                                                </li>
+                                                <li class="page-item">
+                                                    <button class="page-link">2</button>
+                                                </li>
+                                                <li class="page-item">
+                                                    <button class="page-link">3</button>
+                                                </li>
+                                                <li class="page-item">
+                                                    <button class="page-link icon" aria-label="Next">
+                                                        <i class="material-symbols-outlined">east</i>
+                                                    </button>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div> -->
+                        
+                        <div class="col-xxl-3 col-xxxl-12">
+                            <div class="card gradient-bg-3 rounded-10 border-0 mb-4 pb-20">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 p-20">
+                                    <h3 class="text-white">Notice Board</h3>
+        
+                                    <div class="dropdown action-opt text-center">
+                                        <ul class="dropdown-menu dropdown-menu-end bg-white border-0 box-shadow">
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <ul class="p-20 pt-0 mb-0 list-unstyled last-child-none" style="max-height: 530px;" data-simplebar>
+                                    
+                                    <li class="mb-3 pb-3" style="border-bottom: 1px dashed #B4B4C6;">
+                                        <h3 class="fs-16 text-white mb-1">July 02, 2026</h3>
+                                        <p class="fs-16 lh-1-8" style="color: #A1AAB1;">Result is now available to view. Kindly download the restul from the "Download Result" button in the left hand side menu.</p>
+                                        <h3 class="fs-16 mb-1" style="color: #A1AAB1;">Posted By</h3>
+                                        <p class="fs-16" style="color: #A1AAB1;"><span class="text-primary-30">Fahad Mohsin</span> (Admin - Foster International School)</p>
+                                    </li>
+                                    
+                                    
+                                    <li class="mb-3 pb-3" style="border-bottom: 1px dashed #B4B4C6;">
+                                        <h3 class="fs-16 text-white mb-1">June 25, 2026</h3>
+                                        <p class="fs-16 lh-1-8" style="color: #A1AAB1;">Results will be published on the portal in first week of July, 2026.</p>
+                                        <h3 class="fs-16 mb-1" style="color: #A1AAB1;">Posted By</h3>
+                                        <p class="fs-16" style="color: #A1AAB1;"><span class="text-primary-30">Mr. Jamal Sohail</span> (CEO - Foster International School)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                        <div class="col-xxl-8 col-xxxl-12">
+                            <div class="card bg-white p-20 rounded-10 border border-white mb-4">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-20">
+                                    <h3>Highest Performing Student</h3>
+
+                                    <!-- <div class="dropdown select-dropdown without-border">
+                                        <button class="dropdown-toggle bg-transparent text-secondary fs-15" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Year 2026
+                                        </button>
+                                    </div> -->
+                                </div>
+
+                                <div style="margin: -24px -48px -28px -16px;">
+                                    <div id="student_performance_by_subject_chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    </div>
+
+{% endblock %}
