@@ -1,1 +1,1 @@
-web: gunicorn FOSTERSCHOOL.wsgi
+web: gunicorn config.wsgi
